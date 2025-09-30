@@ -2,16 +2,23 @@
 
 Aplicação React que consome a **API pública The Movie Database (TMDb)** para exibir filmes populares e realizar buscas por título.
 
+## Integrantes
+
+- Geovanna Karin Silva Gabriel
+- Rodrigo Augusto de Melo
+
 ## Tecnologias utilizadas
 
-* React 18
-* Vite
-* Tailwind CSS
-* Axios
-* React Router DOM
-* Node.js / npm
+- **React 18** – Biblioteca para construção de interfaces reativas.
+- **Vite** – Ferramenta de build e bundler rápido para projetos React.
+- **Tailwind CSS** – Framework CSS para estilização responsiva.
+- **Axios** – Cliente HTTP para consumir a API do TMDb.
+- **React Router DOM** – Gerenciamento de rotas da aplicação.
+- **Node.js / npm** – Ambiente de execução JavaScript e gerenciador de pacotes.
 
 ## Estrutura do projeto
+
+
 
 src/
 ├─ components/
@@ -26,43 +33,66 @@ src/
 ├─ main.jsx
 └─ index.css
 
+
 ## Funcionalidades
 
-* Exibe **filmes populares** na tela inicial.
-* Permite **buscar filmes por título**.
-* Exibe **detalhes do filme** ao clicar em "Ver detalhes".
-* Centralização e estilização responsiva com **Tailwind CSS**.
-* Tratamento de **loading** e **erros de API**.
+- Exibe filmes populares na tela inicial.
+- Permite buscar filmes por título.
+- Exibe detalhes do filme ao clicar em "Ver detalhes".
+- Centralização e estilização responsiva com Tailwind CSS.
+- Tratamento de loading e erros de API.
 
-## Como executar localmente
+## Passo a passo para configurar o projeto localmente
 
-1. Clone o repositório:
+### 1. Instalar Node.js e npm
+Baixe e instale a versão estável do Node.js (v18 ou superior).
 
-```
-git clone https://github.com/SEU-USUARIO/TMDB-App.git
-```
+Confirme a instalação:
 
-2. Acesse a pasta do projeto:
+```bash
+node -v
+npm -v
 
-```
-cd TMDB-App
-```
+### 2. Criar o projeto com Vite 
 
-3. Instale as dependências:
+npm create vite@latest tmdb-app -- --template react
+cd tmdb-app
 
-```
+### 3. Instalar dependências principais
+npm install react-router-dom axios
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+### 4. Configurar Tailwind CSS
+
+content: ["./index.html", "./src/**/*.{js,jsx}"];
+
+### 5. Criar estrutura de pastas e arquivos
+src/components/Header.jsx
+src/components/MovieCard.jsx
+src/pages/Home.jsx
+src/pages/Details.jsx
+src/services/api.js
+App.jsx e main.jsx
+
+### 6. Configurar API TMDb
+VITE_TMDB_API_KEY=0923ac32d20ebd91568b4141bf65e2f5
+
+### 7. Rodar Localmente
+
 npm install
-```
-
-4. Rode o servidor de desenvolvimento:
-
-```
 npm run dev
-```
 
-5. Abra o navegador 
+### 8. Commit e push para GitHub
 
-## Deploy na Vercel
+git init
+git add .
+git commit -m "Primeiro commit - TMDb App completo"
+git branch -M main
+git remote add origin https://github.com/RodrigoMeloads/Consulta-Movie.git
+git push -u origin main
+
+### 9. Deploy na Vercel
 
 O projeto está publicado na Vercel.
 🔗 Link funcional do deploy: **(https://consulta-movie-git-main-melo-rods-projects.vercel.app)**
