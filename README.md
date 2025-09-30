@@ -60,12 +60,12 @@ npm install
 npm run dev
 ```
 
-5. Abra o navegador em `http://localhost:5173`
+5. Abra o navegador 
 
 ## Deploy na Vercel
 
 O projeto está publicado na Vercel.
-🔗 Link funcional do deploy: **[COLE AQUI O LINK DO SEU APP]**
+🔗 Link funcional do deploy: **(https://consulta-movie-git-main-melo-rods-projects.vercel.app)**
 
 ## Observações
 
